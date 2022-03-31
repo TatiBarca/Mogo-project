@@ -1,0 +1,87 @@
+.ourWork-accordion {
+    width: 49%;
+
+    @include below($md-max) {
+        width: 100%;
+    }
+
+    &__item {
+        border: 1px solid #e5e5e5;
+        margin-bottom: 10px;
+        cursor: pointer;
+
+        &.active .accordion__content {
+            display: block;
+        }
+
+        &.active .accordion__header:after {
+            transform: translateY(-50%) rotate(-45deg);
+            -webkit-transform: translateY(-50%) rotate(-45deg);
+            -moz-transform: translateY(-50%) rotate(-45deg);
+            -ms-transform: translateY(-50%) rotate(-45deg);
+            -o-transform: translateY(-50%) rotate(-45deg);
+            margin-top: 5px;
+        }
+
+        &.active .accordion__header {
+            border-bottom-color: #e5e5e5;
+        }
+    }
+
+    &__header {
+        position: relative;
+        padding: 15px 20px 15px 60px;
+        border-bottom: 1px solid transparent;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        z-index: 1;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+    }
+
+    &__link {
+        display: block;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: black;
+        cursor: pointer;
+        
+
+        &:hover {
+            color: black;
+        }
+
+        &:after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            right: 25px;
+            z-index: 1;
+            width: 15px;
+            height: 15px;
+            border-top: 2px solid #ccc;
+            border-right: 2px solid #ccc;
+            transition: transform .2s ease-in-out;
+            transform: translateY(-50%) rotate(135deg);
+        }
+
+        &:not(.collapsed)::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__content {
+        // display: none;
+        font-style: italic;
+        font-weight: 300;
+        padding: 15px 20px;
+        color: #999;
+    }
+}

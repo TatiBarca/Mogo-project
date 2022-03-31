@@ -1,0 +1,28 @@
+.devices {
+    background: url("../img/devices-bg.png") center center / cover no-repeat;
+    padding-bottom: 0;
+    margin-bottom: 40px;
+
+
+    &-block {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        position: relative;
+
+        &__item {
+            display: block;
+
+            &_iphone {
+                position: absolute;
+                bottom: -50px;
+                right: 0;
+                z-index: 1;
+
+                @include below($xs-max) {
+                    width: 40%;
+                }
+            }
+        }
+    }
+}

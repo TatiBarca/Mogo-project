@@ -1,0 +1,32 @@
+
+.map {
+    text-align: center;
+
+    &__title {
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color:#333;
+        
+            &::after {
+            content:"";
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #f38181;
+            margin: 15px auto;
+        }
+    }
+    &__link {
+        color: #f38181;
+    
+        &:hover{
+            color: #f38181;
+        }
+    }
+
+    &__icon {
+        margin-bottom: 10px;
+        color: #f38181;
+    }
+}

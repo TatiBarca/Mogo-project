@@ -1,0 +1,43 @@
+.statistic {
+    background-color:#95e1d3;
+}
+
+.stat {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        flex: 1 1 0;
+        text-align: center;
+        color: white;
+        border-left: 1px solid #b5eae0;
+        padding: 70px 15px;
+
+        &:last-child{
+            border-right: 1px solid #b5eae0;
+
+            @include below($sm-max) {
+                border-right: none;
+            }
+        }
+
+        @include below($sm-max) {
+            width: 100%;
+            flex:none;
+            border-left: none;
+            border-bottom: 1px solid #b5eae0;
+            border-top:0;
+        }
+    }
+    &__count {
+        font-size:72px;
+        line-height: 75px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    
+    &__text {
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+}

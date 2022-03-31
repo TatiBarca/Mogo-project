@@ -1,0 +1,66 @@
+.reviews {
+
+    &__photo {
+        max-width: none;
+        border: 2px solid #95e1d3;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+
+        @include below($sm-max) {
+            max-width: 80%;
+        }
+    }
+
+    &__text {
+        padding: 0 25px;
+
+        @include below($md-max) {
+            padding: 0;
+        }
+    }
+
+    &__message {
+        font-size: 24px;
+        line-height: 36px;
+        font-style: italic;
+        font-weight: 300;
+        color: #9999;
+
+        @include below($md-max) {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        @include below($xs-max) {
+            font-size: 15px;
+            line-height: 20px;
+        }
+        
+    }
+
+    &__author {
+        font-size: 24px;
+        font-family: 'Kaushan Script', cursive;
+        color: #333;
+
+        @include below($xs-max) {
+            font-size: 15px;
+        }
+
+        &::before {
+            display: inline-block;
+            content: "";
+            width: 60px;
+            height: 3px;
+            background-color: #f38181;
+            vertical-align: middle;
+            margin-right: 10px;
+
+            @include below($xs-max) {
+                width: 27px;
+            }
+        }
+    }
+}

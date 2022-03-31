@@ -1,0 +1,66 @@
+.clients {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        display: flex;
+        width: 50%;
+
+        @include below($md-max) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__image img {
+        max-width: none !important;
+    }
+
+    &__data {
+        padding: 0 20px
+    }
+
+    &__name {
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        color: #000;
+
+        @include below($sm-max) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__prof {
+        font-size: 15px;
+        font-style: italic;
+
+        @include below($sm-max) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__text {
+        font-size: 15px;
+        line-height: 24px;
+        color: #afafaf;
+
+        @include below(xs-max) {
+            font-style: 14px;
+            line-height: 19px;
+        }
+
+        &:before {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            margin: 15px 0;
+            background-color: #f38181;
+
+            @include below($sm-max) {
+                margin: 10px 0;
+            }
+        }
+    }
+}
